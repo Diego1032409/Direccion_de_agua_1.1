@@ -3,7 +3,7 @@ import geopandas as gpd
 from shapely.geometry import Point
 
 # URL directa para exportar la hoja como CSV (con gid=0)
-url = "https://docs.google.com/spreadsheets/d/1pfKozIhhxKbGF2dhtIZMyFyeJhk0aK4wshZYzh5MQTs/export?format=csv&gid=0"
+url = "https://docs.google.com/spreadsheets/d/1pfKozIhhxKbGF2dhtIZMyFyeJhk0aK4wshZYzh5MQTs/edit?gid=0#gid=0
 
 # Leer CSV desde la URL
 sitada = pd.read_csv(url)
