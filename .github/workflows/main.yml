@@ -21,7 +21,7 @@ jobs:
         run: pip install pandas geopandas shapely pyproj fiona
 
       - name: Ejecutar script para actualizar GeoJSON
-        run: python Prueba_1.6/untitled2.py
+        run: python Prueba_Agua/untitled2.py
 
 
 
