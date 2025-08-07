@@ -33,3 +33,8 @@ jobs:
           git add sistemas_prueba.geojson  # Asegúrate de que este sea el path correcto
           git commit -m "Actualizar GeoJSON automático" || echo "Sin cambios para commitear"
           git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git HEAD:main
+
+      - name: Ver permisos GITHUB_TOKEN
+        run: |
+          echo "Permisos del token:"
+          curl -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" https://api.github.com/rate_limit
