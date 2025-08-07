@@ -1,8 +1,4 @@
 
-
-# Instalamos las librerías necesarias
-!pip install geopandas shapely
-
 # Importamos las librerías
 #Pandas se encarga de extraer los datos de la tabla de excel y la convierte en una tabla de python
 import pandas as pd
