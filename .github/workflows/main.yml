@@ -23,6 +23,12 @@ jobs:
       - name: Ejecutar script para actualizar GeoJSON
         run: python Prueba_Agua/untitled2.py  # Cambia esto si tu script tiene otro nombre
 
+        
+      - name: Ver permisos GITHUB_TOKEN
+        run: |
+          echo "Permisos del token:"
+          curl -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" https://api.github.com/rate_limit
+
       - name: Configurar git para hacer commit
         run: |
           git config --global user.name "github-actions"
@@ -34,7 +40,3 @@ jobs:
           git commit -m "Actualizar GeoJSON automático" || echo "Sin cambios para commitear"
           git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git HEAD:main
 
-      - name: Ver permisos GITHUB_TOKEN
-        run: |
-          echo "Permisos del token:"
-          curl -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" https://api.github.com/rate_limit
