@@ -23,16 +23,17 @@ jobs:
       - name: Ejecutar script para actualizar GeoJSON
         run: python Prueba_Agua/untitled2.py
 
-
-
       - name: Configurar git para hacer commit
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
 
+      - name: Configurar URL remota con token
+        run: |
+          git remote set-url origin https://x-access-token:${{ secrets.PAT_TOKEN }}@github.com/${{ github.repository }}.git
+
       - name: Hacer commit y push del GeoJSON
         run: |
           git add sistemas_prueba.geojson
           git commit -m "Actualizar GeoJSON automático" || echo "Sin cambios para commitear"
-          git push https://x-access-token:${{ secrets.PAT_TOKEN }}@github.com/${{ github.repository }}.git HEAD:main
-
+          git push origin HEAD:main
