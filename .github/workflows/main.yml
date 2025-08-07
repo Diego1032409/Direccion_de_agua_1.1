@@ -1,42 +1,32 @@
 name: Actualizar GeoJSON desde Google Sheets
 
+permissions:
+  contents: write
+
 on:
   schedule:
-    - cron: '0 * * * *'  # Cada hora
-  workflow_dispatch:     # También se puede ejecutar manualmente
+    - cron: '0 * * * *'
+  workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Clonar el repositorio
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
-      - name: Configurar Python
-        uses: actions/setup-python@v4
+      - uses: actions/setup-python@v4
         with:
           python-version: '3.11'
 
-      - name: Instalar dependencias
-        run: pip install pandas geopandas shapely pyproj fiona
+      - run: pip install pandas geopandas shapely pyproj fiona
 
-      - name: Ejecutar script para actualizar GeoJSON
-        run: python Prueba_Agua/untitled2.py  # Cambia esto si tu script tiene otro nombre
+      - run: python Prueba_Agua/untitled2.py
 
-        
-      - name: Ver permisos GITHUB_TOKEN
-        run: |
-          echo "Permisos del token:"
-          curl -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" https://api.github.com/rate_limit
-
-      - name: Configurar git para hacer commit
-        run: |
+      - run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
 
-      - name: Hacer commit y push del GeoJSON
-        run: |
-          git add sistemas_prueba.geojson  # Asegúrate de que este sea el path correcto
+      - run: |
+          git add sistemas_prueba.geojson
           git commit -m "Actualizar GeoJSON automático" || echo "Sin cambios para commitear"
           git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git HEAD:main
-
