@@ -32,7 +32,7 @@ jobs:
 
       - name: Hacer commit y push del GeoJSON
         run: |
-          git add docs/sistemas_prueba.geojson
+          git add sistemas_prueba.geojson
           git commit -m "Actualizar GeoJSON automático" || echo "Sin cambios para commitear"
           git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git HEAD:main
 
