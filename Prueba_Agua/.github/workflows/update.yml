@@ -21,7 +21,7 @@ jobs:
         run: pip install pandas geopandas shapely pyproj fiona
 
       - name: Ejecutar script para actualizar GeoJSON
-        run: python sistemas_prueba.py
+        run: python Untitled2.py
 
       - name: Configurar git para hacer commit
         run: |
