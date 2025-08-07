@@ -2,8 +2,8 @@ name: Actualizar GeoJSON desde Google Sheets
 
 on:
   schedule:
-    - cron: '0 * * * *'  # Se ejecuta cada hora
-  workflow_dispatch:     # Permite ejecución manual
+    - cron: '0 * * * *'  # Cada hora
+  workflow_dispatch:     # También se puede ejecutar manualmente
 
 jobs:
   build:
@@ -27,6 +27,13 @@ jobs:
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
+
+      - name: Hacer commit y push del GeoJSON
+        run: |
+          git add docs/sistemas_prueba.geojson
+          git commit -m "Actualizar GeoJSON automático" || echo "Sin cambios para commitear"
+          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git HEAD:main
+
 
       - name: Hacer commit y push del GeoJSON
         run: |
