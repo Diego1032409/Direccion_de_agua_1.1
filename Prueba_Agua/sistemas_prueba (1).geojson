@@ -1,0 +1,12 @@
+{
+"type": "FeatureCollection",
+"name": "sistemas_prueba",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "SITADA": "22033-2021", "FECHA INGRESO": "12/5/2021", "INFRACCIÓN": "Contaminación de aguas", "DESCRIPCIÓN": "Vertido de residuos líquidos en río principal", "LOCALIDAD": "San José", "ESTADO": "Abierto", "SITE": "Sede Central", "FUNCIONARIO": "Juan Pérez", "ASIGNADO A LA UH": "Sí", "LATITUD": 9.9333, "LONGITUD": -84.0833 }, "geometry": { "type": "Point", "coordinates": [ -84.0833, 9.9333 ] } },
+{ "type": "Feature", "properties": { "SITADA": "22034-2021", "FECHA INGRESO": "18/6/2021", "INFRACCIÓN": "Tala ilegal", "DESCRIPCIÓN": "Corte de árboles sin permiso en zona protegida", "LOCALIDAD": "Cartago", "ESTADO": "Cerrado", "SITE": "Sede Este", "FUNCIONARIO": "María Rodríguez", "ASIGNADO A LA UH": "No", "LATITUD": 9.8597, "LONGITUD": -83.9196 }, "geometry": { "type": "Point", "coordinates": [ -83.9196, 9.8597 ] } },
+{ "type": "Feature", "properties": { "SITADA": "22035-2021", "FECHA INGRESO": "23/7/2021", "INFRACCIÓN": "Uso indebido de suelo", "DESCRIPCIÓN": "Construcción fuera de norma en área rural", "LOCALIDAD": "Heredia", "ESTADO": "En proceso", "SITE": "Sede Norte", "FUNCIONARIO": "Carlos Gómez", "ASIGNADO A LA UH": "Sí", "LATITUD": 10.0028, "LONGITUD": -84.1167 }, "geometry": { "type": "Point", "coordinates": [ -84.1167, 10.0028 ] } },
+{ "type": "Feature", "properties": { "SITADA": "22036-2021", "FECHA INGRESO": "5/8/2021", "INFRACCIÓN": "Ruido excesivo", "DESCRIPCIÓN": "Quejas por ruido industrial en zona residencial", "LOCALIDAD": "Alajuela", "ESTADO": "Abierto", "SITE": "Sede Oeste", "FUNCIONARIO": "Laura Fernández", "ASIGNADO A LA UH": "No", "LATITUD": 10.0167, "LONGITUD": -84.2167 }, "geometry": { "type": "Point", "coordinates": [ -84.2167, 10.0167 ] } },
+{ "type": "Feature", "properties": { "SITADA": "22037-2021", "FECHA INGRESO": "12/9/2021", "INFRACCIÓN": "Vertido de residuos sólidos", "DESCRIPCIÓN": "Acumulación de basura en río local", "LOCALIDAD": "Limón", "ESTADO": "Cerrado", "SITE": "Sede Caribe", "FUNCIONARIO": "José Martínez", "ASIGNADO A LA UH": "Sí", "LATITUD": 10.0011, "LONGITUD": -83.0333 }, "geometry": { "type": "Point", "coordinates": [ -83.0333, 10.0011 ] } }
+]
+}
