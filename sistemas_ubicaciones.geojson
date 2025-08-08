@@ -1,6 +1,6 @@
 {
 "type": "FeatureCollection",
-"name": "sistemas_prueba",
+"name": "sistemas_ubicaciones",
 "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
 "features": [
 { "type": "Feature", "properties": { "SITADA": "22038-2021", "FECHA INGRESO": "20/9/2021", "INFRACCIÓN": "Vertido de residuos líquidos", "DESCRIPCIÓN": "Descarga ilegal en quebrada", "LOCALIDAD": "Cartago", "ESTADO": "Abierto", "SITE": "Sede Este", "FUNCIONARIO": "Marcos Jiménez", "ASIGNADO A LA UH": "Sí", "LATITUD": 9.8571, "LONGITUD": -83.919 }, "geometry": { "type": "Point", "coordinates": [ -83.919, 9.8571 ] } },
