@@ -20,13 +20,13 @@ jobs:
 
       - run: pip install pandas geopandas shapely pyproj fiona
 
-      - run: python Prueba_Agua/untitled2.py
+      - run: python Prueba_Agua/auto_update.py
 
       - run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
 
       - run: |
-          git add sistemas_prueba.geojson
+          git add sistemas_ubicaciones.geojson
           git commit -m "Actualizar GeoJSON automático" || echo "Sin cambios para commitear"
           git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git HEAD:main
