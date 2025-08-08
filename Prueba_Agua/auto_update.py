@@ -21,5 +21,5 @@ gdf = gpd.GeoDataFrame(sitada, geometry='geometry')
 gdf.set_crs(epsg=4326, inplace=True)
 
 # Guardar GeoDataFrame en archivo GeoJSON
-gdf.to_file('sistemas_prueba.geojson', driver='GeoJSON')
+gdf.to_file('sistemas_ubicaciones.geojson', driver='GeoJSON')
 
